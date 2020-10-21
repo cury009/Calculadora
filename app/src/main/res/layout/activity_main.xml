@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_dividir"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:background="@drawable/dividir"
+        android:onClick="dividir"
+        app:layout_constraintStart_toEndOf="@+id/btn_multiplicar"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numero2" />
+
+    <Button
+        android:id="@+id/btn_porcentaje"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/porcentaje"
+        android:onClick="porcentaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toEndOf="@+id/btn_dividir"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numero2"
+        android:layout_marginStart="@dimen/margenMainActivity" />
+
+    <EditText
+        android:id="@+id/edt_numero1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="@dimen/margenMainActivity"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txt_hint_numero1"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="@dimen/tamletra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_numero2"
+        android:layout_width="373dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:layout_marginRight="@dimen/margenMainActivity"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txt_hint_numero2"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/tamletra"
+        app:layout_constraintEnd_toEndOf="@+id/edt_numero1"
+        app:layout_constraintStart_toStartOf="@+id/edt_numero1"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numero1" />
+
+    <Button
+        android:id="@+id/btn_sumar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:background="@drawable/mas"
+        android:onClick="sumar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numero2"
+        android:layout_marginStart="@dimen/margenMainActivity" />
+
+    <Button
+        android:id="@+id/btn_restar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:background="@drawable/menos"
+        app:layout_constraintStart_toEndOf="@+id/btn_sumar"
+        android:onClick="restar"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numero2" />
+
+    <Button
+        android:id="@+id/btn_multiplicar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginTop="@dimen/margenMainActivity"
+        android:background="@drawable/multiplicar"
+        android:onClick="multiplicar"
+        app:layout_constraintStart_toEndOf="@+id/btn_restar"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numero2" />
+
+    <TextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="350dp"
+        android:layout_height="416dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="@dimen/margenMainActivity"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="@dimen/margenMainActivity"
+        android:layout_marginBottom="24dp"
+        android:hint="@string/_0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
